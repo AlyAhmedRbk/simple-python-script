@@ -10,7 +10,7 @@ pipeline {
          stage('build') {
           steps {
                   echo "Buiilding"
-                  bat 'python hello.py'
+                  bat 'python3.10 hello.py'
           }
        }
    }
