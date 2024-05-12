@@ -1,9 +1,14 @@
 pipeline {
     agent any 
     stages {
+        stage('test') {
+            steps {
+                bat 'python --version'
+            }
+        }
          stage('build') {
           steps {
-            bat 'python3 hello.py'
+            bat 'python hello.py'
           }
        }
    }
