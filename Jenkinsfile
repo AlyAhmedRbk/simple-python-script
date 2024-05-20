@@ -13,5 +13,11 @@ pipeline {
                   sh 'python3 hello.py'
           }
        }
+         stage('deploy') {
+          steps {
+                  echo "Deploying App..."
+                  sh 'python3 app.py'
+          }
+       }
    }
 }
