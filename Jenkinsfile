@@ -4,13 +4,13 @@ pipeline {
         stage('test') {
             steps {
                 echo "Testing"
-                bat 'git --version'
+                sh 'python --version'
             }
         }
          stage('build') {
           steps {
                   echo "Buiilding"
-                  bat 'python hello.py'
+                  sh 'python hello.py'
           }
        }
    }
