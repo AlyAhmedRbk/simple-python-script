@@ -5,10 +5,7 @@ pipeline {
             steps {
                 echo "Testing"
                 sh 'python3 --version'
-                echo "This is my IP"
-                curl -s ifconfig.co
-                echo "This is my hostname"
-                hostname -f
+                sh'gcloud compute zones list'
             }
         }
          stage('build') {
