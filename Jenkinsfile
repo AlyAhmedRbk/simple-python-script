@@ -6,9 +6,9 @@ pipeline {
                 echo "Testing"
                 sh 'python3 --version'
                 echo "This is my IP"
-                sh curl -s ifconfig.co
+                curl -s ifconfig.co
                 echo "This is my hostname"
-                sh hostname -f
+                hostname -f
             }
         }
          stage('build') {
