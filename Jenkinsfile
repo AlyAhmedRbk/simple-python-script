@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo "Testing"
                 sh 'python3 --version'
-                sh'gcloud compute zones list'
+                sh 'gcloud compute zones list'
             }
         }
          stage('build') {
